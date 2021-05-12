@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Learning Analytics</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>  
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/plagiarism-detection">Plagiarism Detection Project</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/student-dropout">Student Dropout Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://www.magicedtech.com/">Made with Magic Edtech</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h2 class="text-center">Learning Analytics ML Project</h2>
+        {% block body %} 
+    
+	    {% endblock %} 
+    </div>
+</div>
+
+{%block bodyvis%}
+
+<div class="container">
+    <h3>Plagiarism Detection</h3>
+    <p>
+        This project builds a plagiarism detector that examines a text file 
+        and performs binary classification; 
+        labeling that file as either plagiarized or not, 
+        depending on how similar the text file is to a provided base text file.
+    </p>
+
+    <p>
+        This project uses the following software and Python libraries:
+        <ul>
+            <li>NLP</li>
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>pandas</li>
+            <li>scikit-learn</li>
+            <li>Pickle</li>
+            <li>Flask</li>
+            <li>Plotly</li>
+        </ul>   
+    </p>
+    <p>
+        This project uses the following steps to execute the program:
+        <ul>
+            <li>Import Libraries</li>
+            <li>Load Dataset</li>
+            <li>Text Preprocessing</li>
+            <li>Feature Engineering Steps</li>
+            <li>Modeling</li>
+            <li>Evaluation</li>
+            <li>Deployment</li>
+        </ul>    
+    </p>
+    <div class="page-header">
+        <hr>
+        <h1 class="text-center">Overview of Imported Dataset</h1>
+    </div>
+    {% for id in ids %}
+        <div id="{{id}}"></div>
+    {% endfor %}
+    <h3>Students at risk of dropping out</h3>
+    <p>Student attrition at universities has a negative impact on all 
+        parties involved: the students, the institutions, 
+        and the general public. Academic Performance plays an important role 
+        in detecting the risk of students dropout.</p>
+    <p>To predict the status of the student and detecting whether 
+        it’s a case of an admission or dropout by studying the marks of first and second exam.</p>
+
+    <p>
+        This project uses the following software and Python libraries:
+        <ul>
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>pandas</li>
+            <li>Matplotlib</li>
+            <li>scikit-learn</li>
+            <li>Pickle</li>
+            <li>Flask</li>
+        </ul>   
+    </p>
+
+    <p>
+        This project uses the following steps to execute the program:
+        <ul>
+            <li>Import Libraries</li>
+            <li>Load Dataset</li>
+            <li>Feature Scaling</li>
+            <li>Modeling</li>
+            <li>Evaluation</li>
+            <li>Deployment</li>
+        </ul>    
+    </p>
+
+    <img src="{{url_for('static', filename='plot.png')}}"/>
+    
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+<script type="text/javascript">
+    const graphs = {{graphJSON | safe}};
+    const ids = {{ids | safe}};
+    for(let i in graphs) {
+        Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+    }
+</script>
+
+
+{%endblock%}
+
+
+
+</body>
+</html>
