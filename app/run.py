@@ -140,144 +140,127 @@ def dropout_go():
     if gender=='male':
         if group=="group A":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))              
+                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))           
 
         elif group=="group B":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
-        
+                dropout = dropout_model.predict(sc.transform([[0,1,0,1,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
         elif group=="group C":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,1,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
        
         elif group=="group D":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
-    
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,1,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
         else:
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[0,1,0,0,0,0,1,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
 
 
     else:
         if group=="group A":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))              
-
+                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+                         
         elif group=="group B":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
-        
+                dropout = dropout_model.predict(sc.transform([[1,0,0,1,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
         elif group=="group C":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
-       
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,1,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
         elif group=="group D":
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,1,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
         else:
             if level=="Master's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,1,0,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Associate's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,1,0,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
             elif level=="Bachelor's Degree":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,1,0,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
-            elif level=="Some College":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))
-            elif level=="Some High School":
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,1,0,0,attendance, duration, maths_score, reading_score, writing_score]]))  
+            elif level=="College":
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,0,1,0,attendance, duration, maths_score, reading_score, writing_score]]))
             else:
-                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+                dropout = dropout_model.predict(sc.transform([[1,0,0,0,0,0,1,0,0,0,0,1,attendance, duration, maths_score, reading_score, writing_score]]))
+            
 
     print(dropout)
     check_dropout = dropout[0]
