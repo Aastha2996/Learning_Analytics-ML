@@ -7,13 +7,22 @@
     <h3 class="text-center">Student Dropout Project</h3>
     <form action="/dropout_go" method="get">
        
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="gender" placeholder="Enter your Gender (male/female)">
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="gender" value="{{gender}}" placeholder="Enter your Gender (male/female)">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <select id="group" type="text" class="form-control form-control-lg" name="group"> 
-                <option value=""disabled selected hidden>Enter your Ethnic Group</option>
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="group" value="{{group}}" placeholder="Enter your group (group A/group B/group C/group D/group E)">
+        </div>
+        <p></p> 
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="level" value="{{level}}" placeholder="Enter your level (Master's/Associate's/Bachelor's Degree or College/High School)">
+        </div>
+        <p></p>
+
+        <!-- <div class="col-lg-offset-4 col-lg-4">
+            <select id="group" type="text" class="form-control form-control-lg" name="group" value="{{group}}">
+                <option value=""disabled selected hidden>Enter your Ethnicity group</option> 
                 <option value="group A">group A</option>
                 <option value="group B">group B</option>
                 <option value="group C">group C</option>
@@ -23,40 +32,39 @@
         </div>
         <p></p>
         <div class="col-lg-offset-4 col-lg-4">
-            <select id="level" type="text" class="form-control form-control-lg" name="level"> 
+            <select id="level" type="text" class="form-control form-control-lg" name="level" value="{{level}}"> 
                 <option value=""disabled selected hidden>Enter your Education level</option>
                 <option value="Master's Degree">Master's Degree</option>
                 <option value="Associate's Degree">Associate's Degree</option>
                 <option value="Bachelor's Degree">Bachelor's Degree</option>
-                <option value="Some College">Some College</option>
-                <option value="Some High School">Some High School</option>
+                <option value="College">College</option>
                 <option value="High School">High School</option>
             </select>
         </div>
-        <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="attendance" placeholder="Enter your Attendance">
+        <p></p> -->
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="attendance" value="{{attendance}}" placeholder="Enter your Attendance">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="duration" placeholder="Enter your Duration in hours">
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="duration" value="{{duration}}" placeholder="Enter your Duration in hours">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="maths_score" placeholder="Enter your Maths exam score">
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="maths_score" value="{{maths_score}}" placeholder="Enter your Maths exam score">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="reading_score" placeholder="Enter your Reading exam score">
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="reading_score" value="{{reading_score}}" placeholder="Enter your Reading exam score">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-4">
-            <input type="text" class="form-control form-control-lg" name="writing_score" placeholder="Enter your Writing exam score">
+        <div class="col-lg-offset-4 col-lg-6">
+            <input type="text" class="form-control form-control-lg" name="writing_score" value="{{writing_score}}" placeholder="Enter your Writing exam score">
         </div>
         <p></p> 
-        <br>
+        
         <div class="col-lg-offset-4 text-center col-lg-3">
-            <button type="submit" id="mySubmit" class="btn btn-lg btn-success" onclick="myFunction()">Check Student's dropout probablity </button>
+            <button type="submit" id="mySubmit" class="btn btn-lg btn-success">Check Student's dropout probablity </button>
         </div>
     </form>
     {% block message %}

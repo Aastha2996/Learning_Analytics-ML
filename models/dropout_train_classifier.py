@@ -144,7 +144,7 @@ def main():
     print('evaluate model')
     print('------------------------')
 
-    print(model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,0,55,10,46,49,39]])))
+    print(model.predict(sc.transform([[1,0,1,0,0,0,0,1,0,0,0,0,55,10,46,49,39]])))
 
     evaluate_model(model, X_test_sc, y_test)
 
