@@ -7,58 +7,55 @@
     <h3 class="text-center">Student Dropout Project</h3>
     <form action="/dropout_go" method="get">
        
-        <div class="col-lg-offset-4 col-lg-6">
-            <input type="text" class="form-control form-control-lg" name="gender" value="{{gender}}" placeholder="Enter your Gender (male/female)">
-        </div>
-        <p></p>
-        <div class="col-lg-offset-4 col-lg-6">
-            <input type="text" class="form-control form-control-lg" name="group" value="{{group}}" placeholder="Enter your group (group A/group B/group C/group D/group E)">
-        </div>
-        <p></p> 
-        <div class="col-lg-offset-4 col-lg-6">
-            <input type="text" class="form-control form-control-lg" name="level" value="{{level}}" placeholder="Enter your level (Master's/Associate's/Bachelor's Degree or College/High School)">
+
+        <div class="col-lg-offset-4 col-lg-4">
+            <select id="gender" type="text" class="form-control form-control-lg" name="gender">
+                <option value=""disabled selected hidden>Enter your Gender</option> 
+                <option value="male"{{'selected' if gender=="male"}}>male</option>
+                <option value="female"{{'selected' if gender=="female"}}>female</option>
+            </select>
         </div>
         <p></p>
 
-        <!-- <div class="col-lg-offset-4 col-lg-4">
-            <select id="group" type="text" class="form-control form-control-lg" name="group" value="{{group}}">
+        <div class="col-lg-offset-4 col-lg-4">
+            <select id="group" type="text" class="form-control form-control-lg" name="group">
                 <option value=""disabled selected hidden>Enter your Ethnicity group</option> 
-                <option value="group A">group A</option>
-                <option value="group B">group B</option>
-                <option value="group C">group C</option>
-                <option value="group D">group D</option>
-                <option value="group E">group E</option>
+                <option value="group A"{{'selected' if group=="group A"}}>group A</option>
+                <option value="group B"{{'selected' if group=="group B"}}>group B</option>
+                <option value="group C"{{'selected' if group=="group C"}}>group C</option>
+                <option value="group D"{{'selected' if group=="group D"}}>group D</option>
+                <option value="group E"{{'selected' if group=="group E"}}>group E</option>
             </select>
         </div>
         <p></p>
         <div class="col-lg-offset-4 col-lg-4">
-            <select id="level" type="text" class="form-control form-control-lg" name="level" value="{{level}}"> 
+            <select id="level" type="text" class="form-control form-control-lg" name="level"> 
                 <option value=""disabled selected hidden>Enter your Education level</option>
-                <option value="Master's Degree">Master's Degree</option>
-                <option value="Associate's Degree">Associate's Degree</option>
-                <option value="Bachelor's Degree">Bachelor's Degree</option>
-                <option value="College">College</option>
-                <option value="High School">High School</option>
+                <option value="Master's Degree"{{'selected' if level=="Master's Degree"}}>Master's Degree</option>
+                <option value="Associate's Degree"{{'selected' if level=="Associate's Degree"}}>Associate's Degree</option>
+                <option value="Bachelor's Degree"{{'selected' if level=="Bachelor's Degree"}}>Bachelor's Degree</option>
+                <option value="College"{{'selected' if level=="College"}}>College</option>
+                <option value="High School"{{'selected' if level=="High School"}}>High School</option>
             </select>
         </div>
-        <p></p> -->
-        <div class="col-lg-offset-4 col-lg-6">
+        <p></p> 
+        <div class="col-lg-offset-4 col-lg-4">
             <input type="text" class="form-control form-control-lg" name="attendance" value="{{attendance}}" placeholder="Enter your Attendance">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-6">
-            <input type="text" class="form-control form-control-lg" name="duration" value="{{duration}}" placeholder="Enter your Duration in hours">
+        <div class="col-lg-offset-4 col-lg-4">
+            <input type="text" class="form-control form-control-lg" name="duration" value="{{duration}}" placeholder="Enter your Duration in hours (max:15)">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-6">
+        <div class="col-lg-offset-4 col-lg-4">
             <input type="text" class="form-control form-control-lg" name="maths_score" value="{{maths_score}}" placeholder="Enter your Maths exam score">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-6">
+        <div class="col-lg-offset-4 col-lg-4">
             <input type="text" class="form-control form-control-lg" name="reading_score" value="{{reading_score}}" placeholder="Enter your Reading exam score">
         </div>
         <p></p>
-        <div class="col-lg-offset-4 col-lg-6">
+        <div class="col-lg-offset-4 col-lg-4">
             <input type="text" class="form-control form-control-lg" name="writing_score" value="{{writing_score}}" placeholder="Enter your Writing exam score">
         </div>
         <p></p> 
